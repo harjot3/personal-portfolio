@@ -26,14 +26,14 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Software Engineer Intern",
-    org: "SALUS Wellness",
-    location: "Atlanta, GA",
+    role: "IT Applications Intern",
+    org: "Group 1001",
+    location: "Zionsville, IN",
     period: "May 2026 – August 2026",
     bullets: [
-      "Developed full-stack web features using JavaScript, React, HTML, and CSS to deliver client-facing interfaces and responsive UI components",
-      "Engineered RESTful APIs in Node.js/Express to aggregate wellness data from 25+ external partners into a unified pipeline",
-      "Architected API endpoints powering core application features, optimizing data flow for 200+ active users",
+      "Engineered low-code automation workflows in Microsoft Power Automate to replace manual, recurring IT Applications processes, reducing time spent on routine operational tasks",
+      "Translated technical requirements gathered from HR, IT, and Compliance stakeholders into automation logic and application-level fixes",
+      "Debugged and resolved system-level issues across integrated applications, collaborating cross-functionally to validate fixes before deployment",
     ],
   },
   {
@@ -56,6 +56,17 @@ export const experience: ExperienceItem[] = [
       "Designed and implemented a Python-based object detection pipeline integrating YOLOv8, automating localization across 12,000+ images at 91% accuracy",
       "Built a Pandas-based ETL system to extract, validate, and structure bounding-box output data into a queryable format for downstream analysis",
       "Partnered with V2X systems engineers to integrate the pipeline into a production computer vision workflow, aligning interfaces across teams",
+    ],
+  },
+  {
+    role: "Software Engineer Intern",
+    org: "SALUS Wellness",
+    location: "Atlanta, GA",
+    period: "May 2025 – August 2025",
+    bullets: [
+      "Developed full-stack web features using JavaScript, React, HTML, and CSS to deliver client-facing interfaces and responsive UI components",
+      "Engineered RESTful APIs in Node.js/Express to aggregate wellness data from 25+ external partners into a unified pipeline",
+      "Architected API endpoints powering core application features, optimizing data flow for 200+ active users",
     ],
   },
 ];
