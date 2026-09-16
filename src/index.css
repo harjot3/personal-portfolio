@@ -108,12 +108,12 @@ section h2 {
   padding: 0;
 }
 
-.list li {
+.list > li {
   padding: 20px 0;
   border-top: 1px solid var(--line);
 }
 
-.list li:first-child {
+.list > li:first-child {
   border-top: none;
   padding-top: 0;
 }
@@ -149,6 +149,26 @@ section h2 {
   font-family: var(--mono);
   font-size: 0.85rem;
   color: var(--muted);
+  margin-bottom: 0;
+}
+
+.sub {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.bullets {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.bullets li {
+  padding: 0;
+  border: none;
+  margin-bottom: 6px;
+}
+
+.bullets li:last-child {
   margin-bottom: 0;
 }
 
