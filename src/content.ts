@@ -1,7 +1,9 @@
 export const profile = {
   name: "Harjot Singh",
   role: "CS @ Purdue University",
-  email: "[redacted]",
+  // Set via the VITE_CONTACT_EMAIL env var (Vercel project settings / local .env.local)
+  // so the address isn't committed to source control.
+  email: import.meta.env.VITE_CONTACT_EMAIL ?? "",
   blurb:
     "Computer Science student at Purdue interested in full-stack systems, distributed infrastructure, and applied machine learning.",
   links: [{ label: "GitHub", url: "https://github.com/harjot3" }],

@@ -96,9 +96,11 @@ export default function App() {
       </main>
 
       <footer id="contact">
-        <p>
-          <a href={`mailto:${profile.email}`}>{profile.email}</a>
-        </p>
+        {profile.email && (
+          <p>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </p>
+        )}
         <p className="links">
           {profile.links.map((l) => (
             <a key={l.label} href={l.url} target="_blank" rel="noreferrer">
