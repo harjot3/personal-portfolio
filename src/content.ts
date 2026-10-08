@@ -28,14 +28,14 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "IT Applications Intern",
-    org: "Group 1001",
-    location: "Zionsville, IN",
+    role: "Software Engineer Intern",
+    org: "SALUS Wellness",
+    location: "Atlanta, GA",
     period: "May 2026 – August 2026",
     bullets: [
-      "Engineered low-code automation workflows in Microsoft Power Automate to replace manual, recurring IT Applications processes, reducing time spent on routine operational tasks",
-      "Translated technical requirements gathered from HR, IT, and Compliance stakeholders into automation logic and application-level fixes",
-      "Debugged and resolved system-level issues across integrated applications, collaborating cross-functionally to validate fixes before deployment",
+      "Developed full-stack web features using JavaScript, React, HTML, and CSS to deliver client-facing interfaces and responsive UI components",
+      "Engineered RESTful APIs in Node.js/Express to aggregate wellness data from 25+ external partners into a unified pipeline",
+      "Architected API endpoints powering core application features, optimizing data flow for 200+ active users",
     ],
   },
   {
@@ -58,17 +58,6 @@ export const experience: ExperienceItem[] = [
       "Designed and implemented a Python-based object detection pipeline integrating YOLOv8, automating localization across 12,000+ images at 91% accuracy",
       "Built a Pandas-based ETL system to extract, validate, and structure bounding-box output data into a queryable format for downstream analysis",
       "Partnered with V2X systems engineers to integrate the pipeline into a production computer vision workflow, aligning interfaces across teams",
-    ],
-  },
-  {
-    role: "Software Engineer Intern",
-    org: "SALUS Wellness",
-    location: "Atlanta, GA",
-    period: "May 2025 – August 2025",
-    bullets: [
-      "Developed full-stack web features using JavaScript, React, HTML, and CSS to deliver client-facing interfaces and responsive UI components",
-      "Engineered RESTful APIs in Node.js/Express to aggregate wellness data from 25+ external partners into a unified pipeline",
-      "Architected API endpoints powering core application features, optimizing data flow for 200+ active users",
     ],
   },
 ];
@@ -117,14 +106,26 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Wizard Platformer",
-    stack: "Java, Swing/AWT, Object-Oriented Design",
-    link: "https://github.com/harjot3/Wizard-Platformer",
+    title: "Multithreaded Task Scheduler",
+    stack: "C++17, C++ Standard Library, CMake, CTest",
+    link: "https://github.com/harjot3/multithreaded-task-scheduler",
     bullets: [
-      "Built a 2D platformer in Java using Swing/AWT with no external game engine",
-      "Structured ~700 lines of code across 4 classes with a reusable Sprite entity model",
-      "Implemented a CardLayout state machine driving menu, play, win, and loss screens",
-      "Designed a custom gravity and jump system using velocity integration",
+      "Built a C++17 thread pool that runs tasks across a fixed set of worker threads with no external dependencies",
+      "Implemented a mutex-protected priority queue with high, normal, and low priorities and FIFO ordering within each priority",
+      "Used condition variables to coordinate workers and std::future to return task results and propagate exceptions",
+      "Added graceful shutdown that drains accepted work and joins all workers, with tests for results, exceptions, ordering, concurrency, and shutdown",
+    ],
+  },
+  {
+    title: "Telemetry & Command System",
+    stack: "C, POSIX Sockets, pthreads, Make, Python, GitHub Actions",
+    link: "https://github.com/harjot3/telemetry-command-system",
+    bullets: [
+      "Built a local vehicle and ground-station simulation exchanging binary UDP commands and telemetry through POSIX sockets",
+      "Coordinated worker threads with bounded ring-buffer queues, mutexes, and condition variables for command processing and telemetry delivery",
+      "Designed a 24-byte protocol with explicit network-byte-order encoding, CRC-32 checksums, and sequence validation to reject malformed or replayed commands",
+      "Implemented SAFE, IDLE, and ACTIVE states with a two-second command watchdog that resets throttle to zero on timeout",
+      "Added C unit tests, Python integration tests over local UDP sockets, sanitizer targets, and a Linux CI workflow for GCC and Clang",
     ],
   },
 ];
