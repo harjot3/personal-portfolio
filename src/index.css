@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --bg: #ffffff;
   --fg: #111111;
   --muted: #666666;
@@ -6,15 +7,6 @@
   --serif: Georgia, "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111111;
-    --fg: #f2f2f2;
-    --muted: #999999;
-    --line: #333333;
-  }
 }
 
 * {
@@ -160,6 +152,18 @@ section h2 {
 .bullets {
   margin: 12px 0 0;
   padding-left: 20px;
+}
+
+.story {
+  margin: 20px 0;
+}
+
+.story p {
+  margin: 0 0 12px;
+}
+
+.story p:last-child {
+  margin-bottom: 0;
 }
 
 .bullets li {

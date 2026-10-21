@@ -47,6 +47,11 @@ export default function App() {
                   <span className="period">{e.period}</span>
                 </div>
                 <p className="sub">{e.location}</p>
+                <div className="story">
+                  {e.story.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
                 <ul className="bullets">
                   {e.bullets.map((b) => (
                     <li key={b}>{b}</li>
@@ -70,6 +75,11 @@ export default function App() {
                   </h3>
                 </div>
                 <p className="tags">{p.stack}</p>
+                <div className="story">
+                  {p.story.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
                 <ul className="bullets">
                   {p.bullets.map((b) => (
                     <li key={b}>{b}</li>
