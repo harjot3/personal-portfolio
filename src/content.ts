@@ -62,7 +62,7 @@ export const experience: ExperienceItem[] = [
     location: "West Lafayette, IN",
     period: "August 2025 – May 2026",
     story: [
-      "At The Data Mine, our team partnered with V2X, a defense contractor previously connected with Raytheon Technology, to read license plates automatically for tolling, working with a dataset of roughly 400,000 vehicle images. I led much of the pipeline development, from model training and plate detection to cropping and OCR integration. We evaluated challenging cases including poor lighting, stacked letters, and multiple vehicles in a frame.",
+      "At The Data Mine, our team partnered with V2X, a defense contractor previously connected with Raytheon Technologies, to read license plates automatically for tolling, working with a dataset of roughly 400,000 vehicle images. I led much of the pipeline development, from model training and plate detection to cropping and OCR integration. We evaluated challenging cases including poor lighting, stacked letters, and multiple vehicles in a frame.",
     ],
     bullets: [
       "Built plate detection and cropping logic in Python with an off-the-shelf YOLO11 model and OpenCV, isolating plates for character recognition",
