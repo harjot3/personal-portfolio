@@ -88,7 +88,7 @@ export const projects: Project[] = [
     stack: "TypeScript, Node.js, PostgreSQL, Supabase, Vercel, HTML/CSS",
     link: "https://github.com/harjot3/manga-release-tracker",
     story: [
-      "One of my favorite projects, this tracker brings manga releases from multiple sources into one place so readers can find new chapters and follow their favorite titles. I built the aggregator to handle the feed: duplicate chapters, repeated polls, and source API limits, without creating repeated releases or notifications.",
+      "My favorite project, this tracker brings manga releases from multiple sources into one place so readers can find new chapters and follow their favorite titles. I built the aggregator to handle the feed: duplicate chapters, repeated polls, and source API limits, without creating repeated releases or notifications.",
     ],
     bullets: [
       "Architected a serverless manga-release aggregator in TypeScript, polling multiple APIs via Vercel Functions",

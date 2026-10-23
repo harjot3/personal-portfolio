@@ -1,13 +1,16 @@
 import { profile, education, experience, projects, skills } from "./content";
+import mangaImage from "../images/image copy.png";
 
 export default function App() {
   return (
     <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
         <a href="#top" className="brand">
-          {profile.name}
+          <img src={mangaImage} width="32" height="32" alt="" />
+          <span>{profile.name}</span>
         </a>
-        <nav>
+        <nav aria-label="Main navigation">
           <a href="#education">Education</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
@@ -16,11 +19,17 @@ export default function App() {
         </nav>
       </header>
 
-      <main id="top">
-        <section className="hero">
-          <h1>{profile.name}</h1>
+      <main id="main-content">
+        <section className="hero" id="top" aria-labelledby="hero-title">
+          <div className="hero-copy">
+          <h1 id="hero-title">{profile.name}<span className="title-period">.</span></h1>
           <p className="role">{profile.role}</p>
           <p className="blurb">{profile.blurb}</p>
+          <a className="hero-link" href="#projects">Explore my work</a>
+          </div>
+          <figure className="manga-panel">
+            <img src={mangaImage} width="474" height="474" alt="Luffy from One Piece, wearing a straw hat and a blue shirt" />
+          </figure>
         </section>
 
         <section id="education">
@@ -66,7 +75,7 @@ export default function App() {
           <h2>Projects</h2>
           <ul className="list">
             {projects.map((p) => (
-              <li key={p.title}>
+              <li key={p.title} className="project-card">
                 <div className="item-head">
                   <h3>
                     <a href={p.link} target="_blank" rel="noreferrer">
@@ -92,13 +101,13 @@ export default function App() {
 
         <section id="skills">
           <h2>Skills</h2>
-          <ul className="list">
+          <ul className="list skill-list">
             {skills.map((s) => (
               <li key={s.label}>
                 <div className="item-head">
                   <h3>{s.label}</h3>
                 </div>
-                <p className="sub">{s.items}</p>
+                <ul className="skill-tags">{s.items.split(", ").map((item) => <li key={item}>{item}</li>)}</ul>
               </li>
             ))}
           </ul>
@@ -106,6 +115,7 @@ export default function App() {
       </main>
 
       <footer id="contact">
+        <div className="footer-heading"><h2>Contact</h2></div>
         {profile.email && (
           <p>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
@@ -118,6 +128,7 @@ export default function App() {
             </a>
           ))}
         </p>
+        <p className="colophon"><span>{profile.name}</span><a href="#top">BACK TO TOP</a></p>
       </footer>
     </>
   );
